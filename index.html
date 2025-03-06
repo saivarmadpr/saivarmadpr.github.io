@@ -3,31 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Cybersecurity Portfolio</title>
+    <title>Sai Varma | Cybersecurity Expert</title>
+    <meta name="description" content="Cybersecurity portfolio of Sai Varma, showcasing expertise, certifications, and projects in network security and penetration testing.">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="certifications.html">Certifications</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="theme-toggle">
+                <button id="themeToggle">Toggle Dark Mode</button>
+            </li>
         </ul>
     </nav>
 
-    <!-- Homepage Content -->
-    <section class="hero">
-        <h1>Hi, I'm [Your Name]</h1>
-        <p>Cybersecurity Professional | Protecting the Digital World</p>
-        <a href="projects.html" class="btn">View My Projects</a>
+    <!-- Sections -->
+    <section id="home" class="section hero">
+        <h1>Hi, I'm Sai Varma</h1>
+        <p>Cybersecurity Expert | Securing the Digital World</p>
+        <a href="#projects" class="btn">Explore My Work</a>
+    </section>
+
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>I’m a dedicated cybersecurity professional with over 3 years of experience in network security, penetration testing, and incident response. My journey began when I discovered my passion for ethical hacking during a university cybersecurity course. Since then, I’ve worked on securing enterprise networks, conducting vulnerability assessments, and developing mitigation strategies for critical systems.</p>
+        <p>I’m passionate about staying ahead of cyber threats, solving complex technical challenges, and mentoring others in the field. In my free time, I enjoy competing in Capture The Flag (CTF) challenges and exploring new security tools.</p>
+    </section>
+
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Technical Skills</h3>
+                <ul>
+                    <li>Penetration Testing</li>
+                    <li>Network Security</li>
+                    <li>Incident Response</li>
+                    <li>Threat Analysis</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Tools</h3>
+                <ul>
+                    <li>Wireshark</li>
+                    <li>Metasploit</li>
+                    <li>Burp Suite</li>
+                    <li>Nessus</li>
+                    <li>Kali Linux</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>Problem-Solving</li>
+                    <li>Communication</li>
+                    <li>Team Collaboration</li>
+                    <li>Critical Thinking</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="section">
+        <h2>Certifications</h2>
+        <ul class="certifications-list">
+            <li><strong>CompTIA Security+</strong> - March 2023, CompTIA</li>
+            <li><strong>Certified Ethical Hacker (CEH)</strong> - June 2024, EC-Council</li>
+            <li><strong>Offensive Security Certified Professional (OSCP)</strong> - December 2024, Offensive Security</li>
+        </ul>
+    </section>
+
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <h3>Network Vulnerability Assessment</h3>
+            <p><strong>Description:</strong> Conducted a comprehensive vulnerability scan on a mock enterprise network, identifying 15 critical vulnerabilities and implementing mitigation strategies to enhance security.</p>
+            <p><strong>Tools:</strong> Nessus, Nmap, Wireshark</p>
+            <p><strong>Outcome:</strong> Reduced risk exposure by 80% and improved network resilience.</p>
+        </div>
+        <div class="project-card">
+            <h3>Custom Exploit Development</h3>
+            <p><strong>Description:</strong> Developed a Python script to automate privilege escalation on a Linux system, targeting a specific vulnerability in legacy software.</p>
+            <p><strong>Tools:</strong> Python, Metasploit, Kali Linux</p>
+            <p><strong>Outcome:</strong> Reduced testing time by 60% and enhanced penetration testing efficiency.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:saivarmadpr@gmail.com">saivarmadpr@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/sai-varma-dantuluri/" target="_blank">linkedin.com/in/saivarma</a></p>
+        <p>GitHub: <a href="https://github.com/saivarmadpr" target="_blank">github.com/saivarmadpr</a></p>
     </section>
 
     <footer>
-        <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+        <p>© 2025 Sai Varma. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
