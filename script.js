@@ -1,4 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // GSAP Animation for Home Section
+    gsap.fromTo(
+        '.home__content',
+        { opacity: 0 },
+        { opacity: 1, duration: 1, ease: 'power2.out' }
+    );
+    gsap.fromTo(
+        '.home__title',
+        { y: 50, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1.2, ease: 'power2.out', delay: 0.3 }
+    );
+    gsap.fromTo(
+        '.home__subtitle',
+        { y: 50, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1.2, ease: 'power2.out', delay: 0.5 }
+    );
+    gsap.fromTo(
+        '.home__description',
+        { y: 50, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1.2, ease: 'power2.out', delay: 0.7 }
+    );
+    gsap.fromTo(
+        '.home__cta',
+        { y: 50, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1.2, ease: 'power2.out', delay: 0.9 }
+    );
+
     // Mobile menu toggle
     const navToggle = document.querySelector('.nav__toggle');
     const navList = document.querySelector('.nav__list');

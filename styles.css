@@ -293,10 +293,16 @@ body {
 /* Home */
 .home {
     text-align: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0; /* Remove padding to ensure centering */
 }
 
 .home__content {
     padding: 2rem;
+    opacity: 0; /* Start hidden for animation */
 }
 
 .home__logo {
