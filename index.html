@@ -4,97 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sai Varma | Cybersecurity Specialist</title>
-    <meta name="description" content="Advanced futuristic portfolio of Sai Varma, showcasing expertise in cybersecurity and technical innovation.">
+    <meta name="description" content="Portfolio of Sai Varma, a cybersecurity specialist with expertise in penetration testing and ethical hacking.">
+    <meta name="keywords" content="cybersecurity, ethical hacking, penetration testing, Sai Varma">
+    <meta name="author" content="Sai Varma">
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWYX+..." crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Montserrat:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <canvas id="particle-canvas"></canvas>
-    <div class="background-image"></div>
-    <!-- Header -->
-    <header class="header" id="header">
+    <header class="header">
         <nav class="nav">
             <div class="nav__brand">Sai Varma</div>
-            <ul class="nav__list" id="nav-list">
-                <li><a href="#home" class="nav__link active">Home</a></li>
-                <li><a href="#about" class="nav__link">About</a></li>
-                <li><a href="#skills" class="nav__link">Skills</a></li>
-                <li><a href="#certifications" class="nav__link">Certs</a></li>
-                <li><a href="#projects" class="nav__link">Projects</a></li>
-                <li><a href="#contact" class="nav__link">Contact</a></li>
+            <button class="nav__toggle" aria-label="Toggle navigation menu">
+                <span class="nav__toggle-icon"></span>
+            </button>
+            <ul class="nav__list">
+                <li><a href="#home" class="nav__link active" aria-label="Go to Home section">Home</a></li>
+                <li><a href="#about" class="nav__link" aria-label="Go to About section">About</a></li>
+                <li><a href="#skills" class="nav__link" aria-label="Go to Skills section">Skills</a></li>
+                <li><a href="#certifications" class="nav__link" aria-label="Go to Certifications section">Certs</a></li>
+                <li><a href="#projects" class="nav__link" aria-label="Go to Projects section">Projects</a></li>
+                <li><a href="#contact" class="nav__link" aria-label="Go to Contact section">Contact</a></li>
             </ul>
-            <div class="nav__toggle" id="nav-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
             <div class="theme-toggle">
-                <button id="themeToggle"><i class="fas fa-sun"></i></button>
+                <input type="checkbox" id="theme-toggle" class="theme-toggle__input" aria-label="Switch between dark and light mode">
+                <label for="theme-toggle" class="theme-toggle__label">
+                    <span class="theme-toggle__sun">☀</span>
+                    <span class="theme-toggle__moon">☽</span>
+                </label>
             </div>
-            <div class="scroll-progress" id="scroll-progress"></div>
-            <div class="digital-clock" id="digital-clock"></div>
         </nav>
     </header>
 
-    <!-- Main Content -->
     <main class="main">
-        <!-- Home (Initial View) -->
         <section class="section home" id="home" data-order="1">
             <div class="container">
-                <div class="home__content initial-view">
-                    <img src="images/profile-pic.jpg" alt="Sai Varma" class="home__img">
-                    <h1 class="home__title">Sai Varma</h1>
-                    <p class="home__subtitle">Cybersecurity Innovator</p>
+                <div class="home__content">
+                    <img src="images/profile-pic.jpg" alt="Sai Varma, Cybersecurity Specialist" class="home__logo" style="display:none;"> <!-- Placeholder for logo -->
+                    <h1 class="home__title">SAI VARMA</h1>
+                    <p class="home__subtitle">CYBERSECURITY INNOVATOR</p>
                     <p class="home__description">Securing the digital frontier with cutting-edge expertise.</p>
-                    <a href="#projects" class="btn">Explore Projects</a>
-                    <a href="resume.pdf" class="btn btn-secondary" download>Download Resume</a>
-                </div>
-                <div class="home__content full-view hidden">
-                    <!-- Full content remains empty initially -->
+                    <div class="home__cta">
+                        <a href="#projects" class="btn btn-primary" aria-label="Explore Sai Varma's projects">Explore Projects</a>
+                        <a href="resume.pdf" class="btn btn-secondary" download aria-label="Download Sai Varma's resume">Download Resume</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- About -->
-        <section class="section about" id="about" data-order="2" style="display: none;">
+        <section class="section about" id="about" data-order="2">
             <div class="container">
                 <h2 class="section__title">About</h2>
-                <p class="about__description">Cybersecurity expert with 3+ years in penetration testing and network security. Passionate about ethical hacking and threat mitigation.</p>
+                <p class="about__description">A cybersecurity professional with over 3 years of experience in penetration testing and network security. I focus on identifying vulnerabilities and building robust defenses.</p>
+                <svg class="cyber-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#00ffcc" width="80px" height="80px" aria-label="Cybersecurity icon">
+                    <path d="M12 2a10 10 0 00-7.07 17.07l1.41-1.41A8 8 0 1112 4v2zm0 16a6 6 0 100-12 6 6 0 000 12zm-2-6H6v-2h4V6h2v4h4v2h-4v4z"/>
+                </svg>
             </div>
         </section>
 
-        <!-- Skills -->
-        <section class="section skills" id="skills" data-order="3" style="display: none;">
+        <section class="section skills" id="skills" data-order="3">
             <div class="container">
                 <h2 class="section__title">Skills</h2>
                 <div class="skills__grid">
                     <div class="skills__card">
                         <h3 class="skills__card-title">Technical</h3>
                         <ul class="skills__list">
-                            <li>Penetration Testing <span class="skill-progress" data-value="90"></span></li>
-                            <li>Network Security <span class="skill-progress" data-value="85"></span></li>
+                            <li>Penetration Testing <span class="skill-progress" data-value="90">90%</span></li>
+                            <li>Network Security <span class="skill-progress" data-value="85">85%</span></li>
                         </ul>
                     </div>
                     <div class="skills__card">
                         <h3 class="skills__card-title">Tools</h3>
                         <ul class="skills__list">
-                            <li>Wireshark <span class="skill-progress" data-value="95"></span></li>
-                            <li>Metasploit <span class="skill-progress" data-value="80"></span></li>
+                            <li>Wireshark <span class="skill-progress" data-value="95">95%</span></li>
+                            <li>Metasploit <span class="skill-progress" data-value="80">80%</span></li>
                         </ul>
                     </div>
                     <div class="skills__card">
                         <h3 class="skills__card-title">Soft</h3>
                         <ul class="skills__list">
-                            <li>Problem-Solving <span class="skill-progress" data-value="90"></span></li>
-                            <li>Communication <span class="skill-progress" data-value="85"></span></li>
+                            <li>Problem-Solving <span class="skill-progress" data-value="90">90%</span></li>
+                            <li>Communication <span class="skill-progress" data-value="85">85%</span></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Certifications -->
-        <section class="section certifications" id="certifications" data-order="4" style="display: none;">
+        <section class="section certifications" id="certifications" data-order="4">
             <div class="container">
-                <h2 class="section__title">Certs</h2>
+                <h2 class="section__title">Certifications</h2>
                 <div class="certifications__grid">
                     <div class="certifications__card">
                         <h3 class="certifications__title">CompTIA Security+</h3>
@@ -112,19 +111,18 @@
             </div>
         </section>
 
-        <!-- Projects -->
-        <section class="section projects" id="projects" data-order="5" style="display: none;">
+        <section class="section projects" id="projects" data-order="5">
             <div class="container">
                 <h2 class="section__title">Projects</h2>
                 <div class="projects__grid">
-                    <div class="project__card" data-modal="modal1">
-                        <img src="images/project1.jpg" alt="Project 1" class="project__img">
+                    <div class="project__card" data-modal="modal1" aria-label="View details of Vulnerability Assessment project">
+                        <img src="images/project1.jpg" alt="Vulnerability Assessment project" class="project__img">
                         <h3 class="project__title">Vuln Assessment</h3>
-                        <p class="project__description">Secured network with 80% risk reduction.</p>
+                        <p class="project__description">Secured a network with 80% risk reduction.</p>
                         <a href="#" class="btn project__btn">Details</a>
                     </div>
-                    <div class="project__card" data-modal="modal2">
-                        <img src="images/project2.jpg" alt="Project 2" class="project__img">
+                    <div class="project__card" data-modal="modal2" aria-label="View details of Exploit Development project">
+                        <img src="images/project2.jpg" alt="Exploit Development project" class="project__img">
                         <h3 class="project__title">Exploit Dev</h3>
                         <p class="project__description">Automated escalation in 60% less time.</p>
                         <a href="#" class="btn project__btn">Details</a>
@@ -133,62 +131,57 @@
             </div>
         </section>
 
-        <!-- Contact -->
-        <section class="section contact" id="contact" data-order="6" style="display: none;">
+        <section class="section contact" id="contact" data-order="6">
             <div class="container">
                 <h2 class="section__title">Contact</h2>
                 <div class="contact__form">
                     <form id="contact-form">
-                        <div class="terminal-prompt">$ </div>
-                        <input type="text" placeholder="Name" class="form-input" required>
-                        <input type="email" placeholder="Email" class="form-input" required>
-                        <textarea placeholder="Message" class="form-input" rows="3" required></textarea>
-                        <div class="terminal-response" id="terminal-response"></div>
-                        <button type="submit" class="btn">Submit</button>
+                        <input type="text" placeholder="Name" class="form-input" required aria-label="Your name">
+                        <input type="email" placeholder="Email" class="form-input" required aria-label="Your email address">
+                        <textarea placeholder="Message" class="form-input" rows="3" required aria-label="Your message"></textarea>
+                        <div class="form-message" role="alert"></div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                     <div class="contact__info">
-                        <p>Email: <a href="mailto:sai.varma@example.com">sai.varma@example.com</a></p>
-                        <p>LinkedIn: <a href="https://linkedin.com/in/saivarma">linkedin.com/in/saivarma</a></p>
-                        <p>GitHub: <a href="https://github.com/saivarmadpr">github.com/saivarmadpr</a></p>
+                        <p>Email: <a href="mailto:sai.varma@example.com" aria-label="Email Sai Varma">sai.varma@example.com</a></p>
+                        <p>LinkedIn: <a href="https://linkedin.com/in/saivarma" aria-label="Visit Sai Varma's LinkedIn profile">linkedin.com/in/saivarma</a></p>
+                        <p>GitHub: <a href="https://github.com/saivarmadpr" aria-label="Visit Sai Varma's GitHub profile">github.com/saivarmadpr</a></p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Project Modals -->
-    <div class="modal" id="modal1">
+    <footer class="footer">
+        <p>© 2025 Sai Varma</p>
+    </footer>
+
+    <div class="modal" id="modal1" role="dialog" aria-labelledby="modal1-title" aria-hidden="true">
         <div class="modal__content">
-            <span class="modal__close">×</span>
-            <h3 class="modal__title">Vuln Assessment</h3>
+            <span class="modal__close" aria-label="Close modal">×</span>
+            <h3 class="modal__title" id="modal1-title">Vuln Assessment</h3>
             <p class="modal__description">Scanned a mock network, mitigated 15 vulnerabilities.</p>
             <pre class="modal__code"><code>import nmap
 port_scanner = nmap.PortScanner()
 port_scanner.scan('192.168.1.1', '1-1024')
 print(port_scanner.scaninfo())</code></pre>
-            <a href="#" class="btn">View Code</a>
+            <a href="#" class="btn btn-primary">View Code</a>
         </div>
     </div>
-    <div class="modal" id="modal2">
+    <div class="modal" id="modal2" role="dialog" aria-labelledby="modal2-title" aria-hidden="true">
         <div class="modal__content">
-            <span class="modal__close">×</span>
-            <h3 class="modal__title">Exploit Dev</h3>
+            <span class="modal__close" aria-label="Close modal">×</span>
+            <h3 class="modal__title" id="modal2-title">Exploit Dev</h3>
             <p class="modal__description">Automated privilege escalation with Python.</p>
             <pre class="modal__code"><code>from pwn import *
 exploit = process('./vuln_app')
 exploit.sendline(b'OVERFLOW')
 exploit.interactive()</code></pre>
-            <a href="#" class="btn">View Code</a>
+            <a href="#" class="btn btn-primary">View Code</a>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>© 2025 Sai Varma | <a href="#home" class="footer__link">Back to Top</a></p>
-    </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
