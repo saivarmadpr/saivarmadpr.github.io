@@ -204,7 +204,9 @@ document.addEventListener('DOMContentLoaded', () => {
         ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-        ctx.fillStyle = document.body.classList.contains('light-mode') ? '#1a2a44' : '#00ffcc';
+        // Dynamic color based on theme
+        const isLightMode = document.body.classList.contains('light-mode');
+        ctx.fillStyle = isLightMode ? '#333333' : '#00ffcc'; // Dark gray in light mode, cyan in dark mode
         ctx.font = fontSize + 'px monospace';
 
         for (let i = 0; i < drops.length; i++) {
