@@ -36,7 +36,14 @@ document.addEventListener('DOMContentLoaded', () => {
         navToggle.setAttribute('aria-expanded', isExpanded);
     });
 
-    // Smooth scrolling and active link
+    // Smooth scrolling for nav brand (scroll to top)
+    const navBrand = document.querySelector('.nav__brand');
+    navBrand.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevent default anchor behavior
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Smooth scrolling and active link for navigation
     const navLinks = document.querySelectorAll('.nav__link');
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
