@@ -1130,3 +1130,67 @@ body {
       font-size: 12px;
     }
   }
+
+  .contact__info {
+    max-width: 800px; /* Increased width to accommodate side-by-side layout */
+    margin: 0 auto;
+    text-align: center;
+    color: var(--secondary-text);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: space-around; /* Evenly space items */
+    align-items: center;
+    padding: 20px 0;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Stack icon and text vertically within each item */
+  }
+  
+  .contact-item a {
+    color: var(--accent);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Stack icon above text */
+    gap: 5px; /* Small gap between icon and text */
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .contact-item a:hover {
+    color: var(--accent-hover); /* Slightly brighter accent on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+  }
+  
+  .contact-item i {
+    font-size: 2rem; /* Increased icon size to 32px */
+    color: var(--accent);
+  }
+  
+  .contact-item span {
+    font-size: 1rem; /* Ensure text size is readable */
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 600px) {
+    .contact__info {
+      flex-direction: column; /* Stack vertically on mobile */
+      gap: 15px; /* Space between items on mobile */
+    }
+  
+    .contact-item a {
+      flex-direction: column; /* Keep icon above text on mobile */
+    }
+  
+    .contact-item i {
+      font-size: 1.5rem; /* Slightly smaller icons on mobile */
+    }
+  
+    .contact-item span {
+      font-size: 0.9rem; /* Slightly smaller text on mobile */
+    }
+  }
