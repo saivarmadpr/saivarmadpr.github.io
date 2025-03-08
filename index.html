@@ -158,41 +158,86 @@
 
         <section class="section contact" id="contact" data-order="6">
             <div class="container">
-                <h2 class="section__title">Contact</h2>
-                <div class="contact__form">
-                    <p>Interested in collaborating or have a cybersecurity challenge? Let’s connect—I’d love to help secure your digital world!</p>
-                    <form id="contact-form">
-                        <input type="text" placeholder="Name" class="form-input" required aria-label="Your name">
-                        <input type="email" placeholder="Email" class="form-input" required aria-label="Your email address">
-                        <textarea placeholder="Message" class="form-input" rows="3" required aria-label="Your message"></textarea>
-                        <div class="form-message" role="alert"></div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                    <br>
-                    <br>
-                    <div class="contact__info">
-                        <div class="contact-item">
-                          <a href="mailto:saivarmadpr@gmail.com" aria-label="Email Sai Varma">
-                            <i class="fas fa-envelope" aria-hidden="true"></i>
-                            <span>saivarmadpr@gmail.com</span>
-                          </a>
-                        </div>
-                        <div class="contact-item">
-                          <a href="https://www.linkedin.com/in/sai-varma-dantuluri/" aria-label="Visit Sai Varma's LinkedIn profile">
-                            <i class="fab fa-linkedin" aria-hidden="true"></i>
-                            <span>linkedin.com/in/saivarma</span>
-                          </a>
-                        </div>
-                        <div class="contact-item">
-                          <a href="https://github.com/saivarmadpr" aria-label="Visit Sai Varma's GitHub profile">
-                            <i class="fab fa-github" aria-hidden="true"></i>
-                            <span>github.com/saivarmadpr</span>
-                          </a>
-                        </div>
-                      </div>
+              <h2 class="section__title">Contact</h2>
+              <div class="contact__form">
+                <p>Interested in collaborating or have a cybersecurity challenge? Let’s connect—I’d love to help secure your digital world!</p>
+                <form id="contact-form">
+                  <input type="text" id="name" name="name" placeholder="Name" class="form-input" required aria-label="Your name">
+                  <input type="email" id="email" name="email" placeholder="Email" class="form-input" required aria-label="Your email address">
+                  <textarea id="message" name="message" placeholder="Message" class="form-input" rows="3" required aria-label="Your message"></textarea>
+                  <div class="form-message" role="alert"></div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+              </div>
+          
+              <!-- Contact Icons Section (after the form) -->
+              <div class="contact__info" style="margin-top: 20px;">
+                <div class="contact-item">
+                  <a href="mailto:saivarmadpr@gmail.com" aria-label="Email Sai Varma">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                    <span>saivarmadpr@gmail.com</span>
+                  </a>
                 </div>
+                <div class="contact-item">
+                  <a href="https://www.linkedin.com/in/sai-varma-dantuluri/" aria-label="Visit Sai Varma's LinkedIn profile">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                    <span>linkedin.com/in/saivarma</span>
+                  </a>
+                </div>
+                <div class="contact-item">
+                  <a href="https://github.com/saivarmadpr" aria-label="Visit Sai Varma's GitHub profile">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                    <span>github.com/saivarmadpr</span>
+                  </a>
+                </div>
+              </div>
+          
+              <!-- EmailJS Integration Scripts -->
+              <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+              <script type="text/javascript">
+                (function() {
+                  emailjs.init({
+                    publicKey: "HZ96_a3Io_LsYlQC_", // Your Public Key
+                  });
+                })();
+              </script>
+              <script>
+                document.getElementById("contact-form").addEventListener("submit", function(event) {
+                  event.preventDefault(); // Prevent page reload
+          
+                  // Get form message element
+                  const formMessage = document.querySelector(".form-message");
+          
+                  // Get form data
+                  const formData = {
+                    name: document.getElementById("name").value,
+                    email: document.getElementById("email").value,
+                    message: document.getElementById("message").value,
+                  };
+          
+                  // Log form data for debugging
+                  console.log("Form Data:", formData);
+          
+                  // Send email via EmailJS
+                  emailjs
+                    .send("service_sbz192y", "template_lpsbrau", formData)
+                    .then(
+                      function(response) {
+                        console.log("Success:", response);
+                        formMessage.textContent = "Message sent successfully!";
+                        formMessage.style.color = "var(--accent)";
+                        document.getElementById("contact-form").reset(); // Clear form
+                      },
+                      function(error) {
+                        console.log("Failed:", error);
+                        formMessage.textContent = "Failed to send message: " + (error.text || "Unknown error");
+                        formMessage.style.color = "red";
+                      }
+                    );
+                });
+              </script>
             </div>
-        </section>
+          </section>
     </main>
 
     <footer class="footer">
