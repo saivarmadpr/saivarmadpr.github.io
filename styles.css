@@ -878,6 +878,7 @@ body {
     font-size: 12px;
   }
 }
+/* Skills Section */
 .skills-section {
     max-width: 1000px;
     margin: 40px auto;
@@ -886,102 +887,27 @@ body {
   }
   
   .skills-section h2 {
-    color: #fff;
-    font-size: 28px;
-    margin-bottom: 30px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
     text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    margin-bottom: 2.5rem;
+    color: var(--accent);
+    position: relative;
+    text-shadow: 0 0 5px rgba(var(--accent-rgb), 0.5);
   }
   
-  .skills-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 columns */
-    grid-template-rows: auto auto; /* 2 rows */
-    gap: 20px;
-    justify-items: center;
+  .skills-section h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
   }
   
-  .skills-section .skills-grid .opaque-tile {
-    background: #1a1a1a !important; /* Solid dark gray */
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    width: 300px !important; /* Fixed width */
-    height: 250px !important; /* Fixed height */
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    opacity: 1 !important; /* Force full opacity */
-    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
-    box-shadow: 0 4px 10px #000 !important; /* Solid black shadow */
-    overflow: hidden !important;
-    /* Ensure no inherited transparency */
-    background-color: #1a1a1a !important; /* Redundant for safety */
-    -webkit-background-composite: source-over !important; /* Webkit fix */
-    background-blend-mode: normal !important; /* Prevent blending */
-  }
-  
-  .skills-section .skills-grid .opaque-tile:hover {
-    transform: translateY(-5px) !important;
-    box-shadow: 0 6px 15px #00cc99 !important; /* Solid neon teal shadow */
-  }
-  
-  .skills-section .skills-grid .opaque-tile .skill-icon {
-    width: 80px !important;
-    height: 80px !important;
-    margin-bottom: 15px !important;
-  }
-  
-  .skills-section .skills-grid .opaque-tile h3 {
-    color: #00ffcc !important; /* Neon cyan */
-    font-size: 20px !important;
-    margin: 10px 0 !important;
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-    max-width: 100% !important;
-  }
-  
-  .skills-section .skills-grid .opaque-tile p {
-    color: #ccc !important;
-    font-size: 14px !important;
-    line-height: 1.4 !important;
-    margin: 0 !important;
-    max-height: 60px !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 600px) {
-    .skills-grid {
-      grid-template-columns: 1fr !important; /* Stack on small screens */
-      grid-template-rows: auto !important;
-    }
-  
-    .skills-section .skills-grid .opaque-tile {
-      width: 100% !important;
-      height: 220px !important;
-      padding: 15px !important;
-    }
-  
-    .skills-section .skills-grid .opaque-tile .skill-icon {
-      width: 60px !important;
-      height: 60px !important;
-    }
-  
-    .skills-section .skills-grid .opaque-tile h3 {
-      font-size: 18px !important;
-    }
-  
-    .skills-section .skills-grid .opaque-tile p {
-      font-size: 12px !important;
-      max-height: 50px !important;
-    }
-  }
-  .certifications-section {
+  /* Certifications Section */
+.certifications-section {
     max-width: 1000px;
     margin: 40px auto;
     padding: 20px;
@@ -989,17 +915,29 @@ body {
   }
   
   .certifications-section h2 {
-    color: #fff;
-    font-size: 28px;
-    margin-bottom: 30px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
     text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    margin-bottom: 2.5rem;
+    color: var(--accent);
+    position: relative;
+    text-shadow: 0 0 5px rgba(var(--accent-rgb), 0.5);
+  }
+  
+  .certifications-section h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
   }
   
   .certifications-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+    grid-template-rows: auto auto; /* 2 rows */
     gap: 20px;
     justify-items: center;
   }
@@ -1017,13 +955,13 @@ body {
     height: 100%;
     backface-visibility: hidden;
     border-radius: 10px;
-    background: #1a1a1a;
+    background: var(--card-bg); /* Use variable for theme adaptability */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: transform 0.6s;
-    box-shadow: 0 4px 10px #000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   }
   
   .tile-front {
@@ -1033,8 +971,8 @@ body {
   
   .tile-back {
     transform: rotateY(180deg);
-    background: #00ffcc;
-    color: #000;
+    background: var(--accent); /* Neon accent for back */
+    color: var(--background); /* Contrast with accent */
   }
   
   .cert-tile:hover .tile-front {
@@ -1052,24 +990,28 @@ body {
   }
   
   .tile-front h3 {
-    color: #00ffcc;
+    font-family: 'Orbitron', sans-serif;
+    color: var(--accent);
     font-size: 20px;
     margin: 10px 0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-shadow: 0 0 3px rgba(var(--accent-rgb), 0.3);
   }
   
   .tile-back p {
+    font-family: 'Roboto', sans-serif;
     font-size: 14px;
     padding: 10px;
     text-align: center;
+    color: var(--background);
   }
   
-  /* Responsive */
+  /* Responsive Adjustments */
   @media (max-width: 600px) {
     .certifications-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr; /* Stack on small screens */
     }
     .cert-tile {
       width: 100%;
