@@ -147,9 +147,9 @@
                         <a href="#" class="btn project__btn">Details</a>
                     </div>
                     <div class="project__card" data-modal="modal2" aria-label="View details of Automated Exploit Development project">
-                        <img src="images/project2.jpg" alt="Automated Exploit Development project" class="project__img">
-                        <h3 class="project__title">Automated Exploit Development</h3>
-                        <p class="project__description">Developed a Python-based tool to automate privilege escalation, cutting testing time by 60%.</p>
+                        <img src="Phishing-Simulation-styled-1.png" alt="Automated Exploit Development project" class="project__img">
+                        <h3 class="project__title">Phishing Simulation & Awareness Training</h3>
+                        <p class="project__description">🎣 Designed a phishing simulation to assess user awareness and improve cybersecurity training.</p>
                         <a href="#" class="btn project__btn">Details</a>
                     </div>
                 </div>
@@ -246,40 +246,38 @@
 
     <div class="modal" id="modal1" role="dialog" aria-labelledby="modal1-title" aria-hidden="true">
         <div class="modal__content">
-            <span class="modal__close" aria-label="Close modal">×</span>
-            <h3 class="modal__title" id="modal1-title">Enterprise Vulnerability Assessment</h3>
-            <p class="modal__description">Conducted a full-scale vulnerability assessment for a mid-sized enterprise, identifying 15 critical vulnerabilities. Used Nmap and Nessus to scan the network, followed by manual verification with Burp Suite for web applications. Delivered a detailed report with remediation steps, reducing the attack surface by 80%.</p>
-            <pre class="modal__code"><code># Sample Nmap script for scanning
-import nmap
-port_scanner = nmap.PortScanner()
-port_scanner.scan('192.168.1.1', '1-1024', arguments='-sV')
-for host in port_scanner.all_hosts():
-    print(f"Host: {host} ({port_scanner[host].hostname()})")
-    print(f"State: {port_scanner[host].state()}")
-    for proto in port_scanner[host].all_protocols():
-        print(f"Protocol: {proto}")
-        ports = port_scanner[host][proto].keys()
-        for port in sorted(ports):
-            print(f"Port: {port}\tState: {port_scanner[host][proto][port]['state']}")
-</code></pre>
-            <a href="#" class="btn btn-primary">View Full Report</a>
+          <span class="modal__close" aria-label="Close modal">×</span>
+          <h3 class="modal__title" id="modal1-title">Strengthen AWS security using industry best practices.</h3>
+          <p class="modal__description"></p>
+          <h4>Key Implementations:</h4>
+          <ul class="modal__list">
+            <li>IAM least privilege access & MFA enforcement.</li>
+            <li>Enabled AWS CloudTrail, GuardDuty, and Security Hub for threat monitoring.</li>
+            <li>Configured AWS WAF to protect against web attacks.</li>
+            <li>Enforced S3 bucket encryption & access controls.</li>
+            <li>Performed penetration testing on cloud-hosted applications.</li>
+          </ul>
+          <p><strong>Tech Stack:</strong> AWS IAM, CloudTrail, GuardDuty, WAF, KMS, Metasploit, Burp Suite.</p>
+          <p><strong>Outcome:</strong> Reduced security misconfigurations, improved cloud security posture, and ensured compliance readiness.</p>
+          <a href="https://github.com/saivarmadpr/AWS-Cloud-Security-Project" class="btn btn-primary">View Full Report</a>
         </div>
-    </div>
+      </div>
     <div class="modal" id="modal2" role="dialog" aria-labelledby="modal2-title" aria-hidden="true">
         <div class="modal__content">
             <span class="modal__close" aria-label="Close modal">×</span>
-            <h3 class="modal__title" id="modal2-title">Automated Exploit Development</h3>
-            <p class="modal__description">Built a Python tool using Pwntools to automate privilege escalation on Linux systems. The tool identifies misconfigurations, exploits them, and escalates privileges in 60% less time than manual methods. Tested on 10+ systems, ensuring reliability and minimizing false positives.</p>
-            <pre class="modal__code"><code># Sample exploit script using Pwntools
-from pwn import *
-context(os='linux', arch='amd64')
-exploit = process('./vuln_app')
-exploit.sendline(b'OVERFLOW_PAYLOAD')
-exploit.recvuntil(b'root@system:')
-print("Privilege escalation successful!")
-exploit.interactive()
-</code></pre>
-            <a href="#" class="btn btn-primary">View Source Code</a>
+            <h3 class="modal__title" id="modal2-title">Phishing Simulation</h3>
+            <p class="modal__description">🎣 Designed a phishing simulation to assess user awareness and improve cybersecurity training.</p>
+            <h4>Key Implementations:</h4>
+            <ul class="modal__list">
+            <li>Set up a custom phishing email campaign using GoPhish.</li>
+            <li>Designed realistic spoofed login pages to mimic legitimate services.</li>
+            <li>Collected and analyzed user interaction data (click rates, credential submissions).</li>
+            <li>Implemented email security controls (SPF, DKIM, DMARC) to prevent phishing.</li>
+            <li>Conducted awareness training based on phishing test results.</li>
+          </ul>
+          <p><strong>Tech Stack:</strong> GoPhish, Python, HTML/CSS, SPF/DKIM/DMARC, SMTP servers.</p>
+          <p><strong>Outcome:</strong> Identified user susceptibility to phishing, improved security awareness, and reinforced email security measures.</p>
+            <a href="https://github.com/saivarmadpr/Phishing-Simulator" class="btn btn-primary">View Source Code</a>
         </div>
     </div>
 
